@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>ARKFA – جایی که ایده‌ها شکوفا می‌شوند</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<style>
+body { margin:0; font-family: Vazirmatn, Tahoma, sans-serif; background:#0f0f2c; color:#e0e0e0; }
+header { position:relative; height:80vh; text-align:center; color:#fff; overflow:hidden; }
+header video { width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:0; opacity:0.6; }
+header .overlay { position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+header h1 { font-size:3rem; margin:0; }
+header p { font-size:1.5rem; margin-top:15px; }
+nav { background:#111133; display:flex; justify-content:center; gap:25px; padding:15px; position:sticky; top:0; z-index:10; }
+nav a { color:#cbd5f5; text-decoration:none; font-weight:500; }
+nav a:hover { color:#22c55e; }
+.container { max-width:1200px; margin:auto; padding:40px 20px; }
+.section-title { font-size:1.8rem; margin-bottom:20px; border-right:4px solid #22c55e; padding-right:10px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+.card { background:#111133; border-radius:16px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,0.4); transition:transform 0.3s ease; cursor:pointer; }
+.card img { width:100%; border-radius:12px; margin-bottom:12px; }
+.card h3 { margin-top:0; color:#38bdf8; }
+.card p { font-size:0.95rem; opacity:0.9; }
+.search-bar { margin-bottom:20px; text-align:center; }
+.search-bar input { width:90%; padding:12px; border-radius:12px; border:none; font-size:1rem; }
+footer { background:#111133; text-align:center; padding:30px 20px; font-size:0.9rem; color:#94a3b8; }
+.floating-contact { position:fixed; bottom:20px; right:20px; display:flex; flex-direction:column; gap:10px; z-index:999; }
+.floating-contact a { background:#25D366; color:#fff; padding:12px 16px; border-radius:50px; text-decoration:none; display:flex; align-items:center; gap:8px; font-weight:600; box-shadow:0 5px 15px rgba(0,0,0,0.3); }
+.floating-contact a.telegram { background:#0088cc; }
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:1000; padding:20px; overflow:auto; }
+.modal-content { background:#111133; padding:30px; border-radius:16px; max-width:800px; width:100%; position:relative; }
+.modal-close { position:absolute; top:15px; right:20px; font-size:1.5rem; cursor:pointer; color:#fff; }
+</style>
+</head>
+<body>
+<header>
+<video autoplay muted loop>
+<source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+</video>
+<div class="overlay">
+<h1>Where Ideas Thrive</h1>
+<p>ARKFA – جایی که ایده‌ها شکوفا می‌شوند</p>
+</div>
+</header>
+<nav>
+<a href="#articles">آموزشی‌ها</a>
+<a href="#news">اخبار</a>
+<a href="#about">درباره ما</a>
+<a href="#contact">ارتباط با ما</a>
+</nav>
+<div class="container" id="articles">
+<h2 class="section-title">مقالات آموزشی هوش مصنوعی</h2>
+<div class="search-bar">
+<input type="text" id="searchArticles" placeholder="جستجو در مقالات..." onkeyup="filterArticles()" />
+</div>
+<div class="grid" id="articles-grid"></div>
+</div>
+<div class="container" id="news">
+<h2 class="section-title">اخبار روز هوش مصنوعی</h2>
+<div class="search-bar">
+<input type="text" id="searchNews" placeholder="جستجو در اخبار..." onkeyup="filterNews()" />
+</div>
+<div class="grid" id="news-grid"></div>
+</div>
+<div class="container" id="about">
+<h2 class="section-title">درباره ما</h2>
+<p>تیم قدرتمند و حرفه‌ای ARKFA از متخصصان هوش مصنوعی در انواع تولید محتوا ویدیویی، تصویری و صوتی با پشتیبانی از تمام زبان‌های دنیا. کافی است افکار خودتان را بلند بلند به ما بگویید تا آن را به واقعیت ویدیویی تبدیل کنیم.</p>
+</div>
+<div class="container" id="contact">
+<h2 class="section-title">ارتباط با ما</h2>
+<p>برای دریافت سفارشات و مشاوره از طریق واتساپ و تلگرام با ما در تماس باشید:</p>
+<p>واتساپ و تلگرام: +989051378921</p>
+</div>
+<footer>
+© 2026 | ARKFA – قدرت گرفته از هوش مصنوعی
+</footer>
+<div class="floating-contact">
+<a href="https://wa.me/989051378921" target="_blank"><i class="fab fa-whatsapp"></i> واتساپ</a>
+<a href="https://t.me/ArkfaAI" target="_blank" class="telegram"><i class="fab fa-telegram"></i> تلگرام</a>
+</div>
+<div class="modal" id="modal">
+<div class="modal-content">
+<span class="modal-close" onclick="closeModal()">&times;</span>
+<h2 id="modal-title"></h2>
+<img id="modal-img" src="" style="width:100%;border-radius:12px;margin-bottom:15px;" />
+<p id="modal-content-text"></p>
+</div>
+</div>
+<script>
+// JSON مقالات نمونه
+const articlesData = [
+  { title:'مقدمه‌ای بر هوش مصنوعی', summary:'آشنایی با مفاهیم پایه AI', content:'متن کامل مقاله مقدمه‌ای بر هوش مصنوعی...', image:'https://source.unsplash.com/400x250/?artificial,intelligence' },
+  { title:'یادگیری ماشین برای مبتدیان', summary:'یادگیری الگوریتم‌ها و مدل‌ها', content:'متن کامل مقاله یادگیری ماشین برای مبتدیان...', image:'https://source.unsplash.com/400x250/?machine,learning' },
+  { title:'شبکه‌های عصبی عمیق', summary:'بررسی CNN، RNN و کاربردها', content:'متن کامل مقاله شبکه‌های عصبی عمیق...', image:'https://source.unsplash.com/400x250/?neural,network' },
+  { title:'هوش مصنوعی در پزشکی', summary:'کاربرد AI در تشخیص و درمان بیماری‌ها', content:'متن کامل مقاله هوش مصنوعی در پزشکی...', image:'https://source.unsplash.com/400x250/?ai,medicine' },
+  { title:'تولید محتوا با AI', summary:'ساخت ویدیو، تصویر و صوت با هوش مصنوعی', content:'متن کامل مقاله تولید محتوا با AI...', image:'https://source.unsplash.com/400x250/?ai,content' }
+];
+// JSON اخبار نمونه
+const newsData = [
+  { title:'رقابت شرکت‌های بزرگ در AI', summary:'OpenAI، Google و Meta در حال رقابت هستند', content:'متن کامل خبر رقابت شرکت‌های بزرگ...', image:'https://source.unsplash.com/400x250/?technology,ai' },
+  { title:'مدل‌های جدید زبان', summary:'قدرت استدلال بالاتر و مصرف انرژی کمتر', content:'متن کامل خبر مدل‌های جدید زبان...', image:'https://source.unsplash.com/400x250/?language,ai' },
+  { title:'AI و صنعت خودرو', summary:'هوش مصنوعی در اتومبیل‌های خودران', content:'متن کامل خبر AI و صنعت خودرو...', image:'https://source.unsplash.com/400x250/?ai,car' }
+];const articlesGrid = document.getElementById('articles-grid'); const newsGrid = document.getElementById('news-grid'); function openModal(title, content, image){ document.getElementById('modal-title').innerText = title; document.getElementById('modal-content-text').innerText = content; document.getElementById('modal-img').src = image; document.getElementById('modal').style.display='flex'; } function closeModal(){ document.getElementById('modal').style.display='none'; } function loadArticles(){ articlesGrid.innerHTML=''; articlesData.forEach(a => { const div = document.createElement('div'); div.className='card'; div.innerHTML=<img src='${a.image}' /><h3>${a.title}</h3><p>${a.summary}</p>; div.onclick=()=>openModal(a.title,a.content,a.image); articlesGrid.appendChild(div); }); } function loadNews(){ newsGrid.innerHTML=''; newsData.forEach(n => { const div = document.createElement('div'); div.className='card'; div.innerHTML=<img src='${n.image}' /><h3>${n.title}</h3><p>${n.summary}</p>; div.onclick=()=>openModal(n.title,n.content,n.image); newsGrid.appendChild(div); }); } function filterArticles(){ const query = document.getElementById('searchArticles').value.toLowerCase(); const filtered = articlesData.filter(a => a.title.toLowerCase().includes(query) || a.summary.toLowerCase().includes(query)); articlesGrid.innerHTML=''; filtered.forEach(a => { const div = document.createElement('div'); div.className='card'; div.innerHTML=<img src='${a.image}' /><h3>${a.title}</h3><p>${a.summary}</p>; div.onclick=()=>openModal(a.title,a.content,a.image); articlesGrid.appendChild(div); }); } function filterNews(){ const query = document.getElementById('searchNews').value.toLowerCase(); const filtered = newsData.filter(n => n.title.toLowerCase().includes(query) || n.summary.toLowerCase().includes(query)); newsGrid.innerHTML=''; filtered.forEach(n => { const div = document.createElement('div'); div.className='card'; div.innerHTML=<img src='${n.image}' /><h3>${n.title}</h3><p>${n.summary}</p>; div.onclick=()=>openModal(n.title,n.content,n.image); newsGrid.appendChild(div); }); } loadArticles(); loadNews(); </script>
+
+</body>
+</html>
