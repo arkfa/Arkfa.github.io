@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Global Insights</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Vazirmatn',sans-serif}
+body{background:#0f172a;color:#fff;overflow-x:hidden}
+header{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
+header video{position:absolute;width:100%;height:100%;object-fit:cover;z-index:-1}
+.overlay{background:rgba(0,0,0,0.6);position:absolute;width:100%;height:100%;top:0;left:0}
+header h1{
+  font-size:5rem;
+  font-weight:900;
+  color:#00bfff;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #fff, 0 0 40px #00bfff;
+}
+header p{margin-top:20px;font-size:1.2rem;color:#ddd}
+.section{padding:80px 20px;max-width:1200px;margin:auto}
+.card{background:#1e293b;padding:20px 25px;border-radius:15px;margin-bottom:20px;box-shadow:0 10px 25px rgba(0,0,0,0.4);cursor:pointer}
+.card h2{margin-bottom:10px;color:#38bdf8}
+.card p{line-height:1.8;color:#e2e8f0;display:block}
+.card:hover{background:#283046}
+footer{background:#020617;padding:30px;text-align:center}
+.floating-btn{position:fixed;bottom:20px;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;font-size:30px;z-index:1000}
+.floating-btn.telegram{right:90px;background:#0088cc}
+.floating-btn.whatsapp{right:20px;background:#25D366}
+.audio-control{position:fixed;bottom:80px;left:20px;background:#00bfff;color:#fff;padding:10px 15px;border-radius:50px;cursor:pointer;z-index:1000}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body><!-- Background Music (hidden, autoplay) --><audio id="bgMusic" autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a73467.mp3?filename=soft-background-music-11017.mp3" type="audio/mpeg">
+</audio>
+<div class="audio-control" onclick="toggleMusic()">خاموش/روشن صدا</div>
+<script>
+function toggleMusic(){
+  var music = document.getElementById('bgMusic');
+  if(music.paused){ music.play(); } else { music.pause(); }
+}
+function openLink(url){
+  window.open(url,'_blank');
+}
+</script><header>
+<div class="overlay"></div>
+<video autoplay muted loop playsinline>
+<source src="https://cdn.coverr.co/videos/coverr-robotic-arm-working-5176/1080p.mp4" type="video/mp4">
+</video>
+<div>
+<h1>ARKFA</h1>
+<p>Exploring Artificial Intelligence, Robotics & Future Technology</p>
+<p>جایی که ایده‌ها شکوفا می‌شوند</p>
+<p>نماد عصر جدید تولید محتوا با هوش مصنوعی</p>
+</div>
+</header><section class="section">
+<div class="card">
+<h2>مقاله ۱: هوش مصنوعی چیست و چگونه آینده جهان را تغییر می‌دهد؟</h2>
+<p>هوش مصنوعی شاخه‌ای از علوم کامپیوتر است که هدف آن ساخت سیستم‌هایی است که بتوانند مانند انسان فکر کنند، یاد بگیرند و تصمیم بگیرند. این فناوری با استفاده از الگوریتم‌های یادگیری ماشین و یادگیری عمیق، داده‌ها را تحلیل می‌کند و الگوها را تشخیص می‌دهد. AI در پزشکی، حمل‌ونقل، تجارت و تولید محتوا کاربرد دارد و آینده جهان به شدت با این فناوری گره خورده است.</p>
+</div><div class="card">
+<h2>مقاله ۲: یادگیری ماشین (Machine Learning) به زبان ساده</h2>
+<p>یادگیری ماشین زیرمجموعه‌ای از هوش مصنوعی است که به سیستم‌ها اجازه می‌دهد بدون برنامه‌نویسی مستقیم، از داده‌ها یاد بگیرند. الگوریتم‌هایی مانند رگرسیون، درخت تصمیم و شبکه‌های عصبی در این حوزه استفاده می‌شوند. کاربردهای آن شامل سیستم‌های پیشنهاددهنده، تشخیص چهره و تحلیل رفتار مشتریان است. هرچه داده بیشتر باشد، مدل دقیق‌تر خواهد بود.</p>
+</div><div class="card">
+<h2>مقاله ۳: نقش رباتیک در صنعت مدرن</h2>
+<p>ربات‌ها در کارخانه‌ها، انبارهای هوشمند و جراحی‌های دقیق استفاده می‌شوند. ترکیب رباتیک با هوش مصنوعی باعث شده ماشین‌ها بتوانند محیط را درک کنند و تصمیم‌های پیچیده بگیرند. این تحول باعث افزایش بهره‌وری و کاهش خطاهای انسانی شده است.</p>
+</div><div class="card">
+<h2>خبر ویژه: پیشرفت جدید در ربات‌های انسان‌نما</h2>
+<p>شرکت‌های فناوری در حال توسعه نسل جدیدی از ربات‌های انسان‌نما هستند که قادر به تعامل طبیعی با انسان هستند. این ربات‌ها از مدل‌های زبانی پیشرفته و سیستم‌های بینایی کامپیوتری استفاده می‌کنند تا محیط اطراف را تحلیل کنند.</p>
+</div><div class="card">
+<h2>خبر فناوری: رشد سرمایه‌گذاری جهانی در AI</h2>
+<p>بر اساس گزارش‌های بین‌المللی، سرمایه‌گذاری جهانی در حوزه هوش مصنوعی در سال‌های اخیر رشد چشمگیری داشته است. شرکت‌ها به دنبال استفاده از AI برای بهینه‌سازی فرآیندها و افزایش سودآوری هستند.</p>
+</div>
+</section><!-- Floating Buttons --><a href="https://t.me/masoudifatima" target="_blank" class="floating-btn telegram"><i class="fab fa-telegram-plane"></i></a> <a href="https://wa.me/989051378921" target="_blank" class="floating-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+<footer>
+<p>© 2026 AI Global Insights</p>
+</footer></body>
+</html>
