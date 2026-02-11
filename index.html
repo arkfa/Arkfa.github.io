@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARKFA | Where Ideas Thrive</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Vazirmatn',sans-serif;background:#0a0f1c;color:#fff;overflow-x:hidden}
+header{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;text-align:center}
+header video{position:absolute;width:100%;height:100%;object-fit:cover;z-index:-1;filter:brightness(40%)}
+.hero-content h1{font-size:60px;margin:0;font-weight:900;
+background:linear-gradient(90deg,#00c6ff,#0072ff,#00c6ff);
+background-size:200% auto;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 3s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+.hero-content h2{font-family:'Poppins',sans-serif;font-size:24px;margin-top:10px}
+.hero-content p{margin-top:10px;font-size:18px;opacity:.9}
+section{padding:80px 10%;max-width:1400px;margin:auto}
+.section-title{font-size:32px;margin-bottom:40px;border-right:4px solid #0072ff;padding-right:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.card{background:#121a2e;border-radius:15px;overflow:hidden;cursor:pointer;transition:.3s}
+.card:hover{transform:translateY(-10px)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card-content{padding:20px}
+.card h3{margin:0 0 10px 0;font-size:20px;color:#00c6ff}
+.card p{font-size:14px;opacity:.8}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);overflow:auto;padding:50px}
+.modal-content{max-width:900px;margin:auto;background:#121a2e;padding:40px;border-radius:20px}
+.close{float:left;font-size:30px;cursor:pointer;color:#fff}
+.floating{position:fixed;bottom:20px;left:20px;display:flex;flex-direction:column;gap:10px;z-index:999}
+.floating a{background:#0072ff;color:#fff;padding:12px 15px;border-radius:50px;text-decoration:none;font-size:14px;box-shadow:0 0 15px #0072ff}
+footer{background:#0f172a;padding:40px;text-align:center;font-size:14px;opacity:.8}
+</style>
+</head>
+<body><header>
+<video autoplay muted loop>
+<source src="https://cdn.coverr.co/videos/coverr-ai-robot-processing-data-9712/1080p.mp4" type="video/mp4">
+</video>
+<div class="hero-content">
+<h1>ARKFA</h1>
+<h2>Where Ideas Thrive</h2>
+<p>جایی که ایده‌ها شکوفا می‌شوند و به واقعیت ویدیویی، صوتی و تصویری تبدیل می‌گردند</p>
+</div>
+</header><section>
+<h2 class="section-title">مقالات آموزشی هوش مصنوعی</h2>
+<div class="grid">
+<div class="card" onclick="openModal('m1')">
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+<div class="card-content">
+<h3>یادگیری ماشین چیست؟</h3>
+<p>آشنایی کامل با مفاهیم پایه Machine Learning و کاربردهای آن.</p>
+</div></div><div class="card" onclick="openModal('m2')">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+<div class="card-content">
+<h3>هوش مصنوعی در تولید محتوا</h3>
+<p>چگونه با AI ویدیو، تصویر و متن حرفه‌ای تولید کنیم.</p>
+</div></div><div class="card" onclick="openModal('m3')">
+<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e">
+<div class="card-content">
+<h3>ساخت چت‌بات پیشرفته</h3>
+<p>مراحل طراحی و پیاده‌سازی چت‌بات هوشمند.</p>
+</div></div>
+</div>
+</section><section>
+<h2 class="section-title">اخبار روز هوش مصنوعی</h2>
+<div class="grid">
+<div class="card" onclick="openModal('n1')">
+<img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f">
+<div class="card-content">
+<h3>رشد سریع مدل‌های مولد در 2026</h3>
+<p>مدل‌های جدید هوش مصنوعی رکوردهای پردازشی را شکستند.</p>
+</div></div><div class="card" onclick="openModal('n2')">
+<img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a">
+<div class="card-content">
+<h3>ورود ربات‌های هوشمند به صنعت</h3>
+<p>نسل جدید ربات‌ها با قابلیت تصمیم‌گیری مستقل.</p>
+</div></div>
+</div>
+</section><div id="m1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('m1')">×</span><h2>یادگیری ماشین چیست؟</h2><p>یادگیری ماشین شاخه‌ای از هوش مصنوعی است که به سیستم‌ها اجازه می‌دهد بدون برنامه‌نویسی مستقیم، از داده‌ها یاد بگیرند. الگوریتم‌های یادگیری نظارت‌شده، بدون نظارت و تقویتی از مهم‌ترین دسته‌ها هستند. کاربردهای آن شامل تشخیص تصویر، پیش‌بینی بازار، تحلیل رفتار مشتری و بسیاری حوزه‌های دیگر است.</p></div></div><div id="m2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('m2')">×</span><h2>هوش مصنوعی در تولید محتوا</h2><p>امروزه ابزارهای AI می‌توانند متن‌های حرفه‌ای، تصاویر هنری، ویدیوهای تبلیغاتی و حتی صداهای طبیعی تولید کنند. با استفاده از مدل‌های مولد مانند GPT و مدل‌های تولید تصویر، برندها می‌توانند با سرعت و کیفیت بالا محتوای خلاقانه تولید کنند.</p></div></div><div id="m3" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('m3')">×</span><h2>ساخت چت‌بات پیشرفته</h2><p>برای ساخت یک چت‌بات حرفه‌ای باید ابتدا هدف کسب‌وکار مشخص شود. سپس با استفاده از API مدل‌های زبانی و طراحی رابط کاربری مناسب، تجربه کاربری قدرتمندی ایجاد گردد. اتصال به دیتابیس و سیستم پاسخ‌گویی هوشمند از مراحل کلیدی است.</p></div></div><div id="n1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('n1')">×</span><h2>رشد سریع مدل‌های مولد در 2026</h2><p>در سال 2026 مدل‌های مولد با افزایش قدرت پردازشی و کاهش هزینه آموزش، تحولی بزرگ در صنعت رسانه و تبلیغات ایجاد کردند. بسیاری از شرکت‌ها اکنون تولید محتوای خود را به صورت کامل به AI سپرده‌اند.</p></div></div><div id="n2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('n2')">×</span><h2>ورود ربات‌های هوشمند به صنعت</h2><p>ربات‌های صنعتی نسل جدید مجهز به هوش مصنوعی قادر به تصمیم‌گیری مستقل و تحلیل محیط هستند. این فناوری بهره‌وری کارخانه‌ها را تا 40٪ افزایش داده است.</p></div></div><section>
+<h2 class="section-title">درباره ما</h2>
+<p>ما یک تیم قدرتمند و حرفه‌ای از متخصصان هوش مصنوعی هستیم که در زمینه تولید محتوای ویدیویی، تصویری و صوتی با پشتیبانی از تمامی زبان‌های دنیا فعالیت می‌کنیم. کافی است ایده‌های خود را با ما در میان بگذارید؛ ما آن را به یک واقعیت دیجیتال حرفه‌ای تبدیل خواهیم کرد.</p>
+</section><section>
+<h2 class="section-title">ارتباط با ما</h2>
+<p>واتساپ و تلگرام: +989051378921</p>
+</section><div class="floating">
+<a href="https://wa.me/989051378921" target="_blank">WhatsApp</a>
+<a href="https://t.me/989051378921" target="_blank">Telegram</a>
+</div><audio autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_9a8d66c2f6.mp3" type="audio/mpeg">
+</audio><footer>
+© 2026 ARKFA - Where Ideas Thrive
+</footer><script>
+function openModal(id){document.getElementById(id).style.display='block'}
+function closeModal(id){document.getElementById(id).style.display='none'}
+</script></body>
+</html>
